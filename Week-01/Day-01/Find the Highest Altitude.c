@@ -1,0 +1,17 @@
+int largestAltitude(int* gain, int gainSize)
+{
+    int currentAltitude = 0;
+    int highestAltitude = 0;
+
+    for(int i = 0; i < gainSize; i++)
+    {
+        currentAltitude += gain[i];
+
+        if(currentAltitude > highestAltitude)
+        {
+            highestAltitude = currentAltitude;
+        }
+    }
+
+    return highestAltitude;
+}
